@@ -58,36 +58,22 @@ header nav a:hover {
     gap: 2rem;
 }
 
-/* Left and right columns */
+/* Left Column */
 .left-column {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
     border: 1px solid #bbb; /* Slightly darker border color */
     padding: 20px;
     background-color: #fff;
-    
-    
 }
-/* Right column resources styling */
+
+/* Right Column */
 .right-column {
-    /* flex: 1;
-    display: flex;
-    flex-direction: column; */
-    /* gap: 20px; */
     border: 1px solid #bbb; /* Slightly darker border color */
     padding: 20px;
     background-color: #fff;
     width: 400px; /* Set the static width to your desired value */
-    /* Optional: Add padding, margins, or other properties if needed */
-    /* transition: width 0.3s ease; Smooth transition if you want to animate the width change */
-    /* overflow: hidden; Prevent content from spilling out if the content exceeds the width */
-}
-
-
-.about-me, .location {
-   border: 1px solid #ccc;
 }
 
 /* Card styling */
@@ -95,7 +81,6 @@ header nav a:hover {
     padding: 15px;
     border-radius: 5px;
     color: #222; /* Darker color for text */
-     
 }
 
 .card h2 {
@@ -106,10 +91,13 @@ header nav a:hover {
     background-color: #004080; /* Darker blue for better contrast */
     margin-bottom: 20px;
     border-radius: 5px;
-    
 }
 
 /* Specific styling for About Me and Location */
+.about-me, .location {
+   border: 1px solid #ccc;
+}
+
 .about-me .text-content, .location .text-content {
     display: flex;
     align-items: center;
@@ -124,10 +112,7 @@ header nav a:hover {
     align-self: flex-end; /* Align image to the right */
 }
 
-
-
-
-
+/* Resources styling */
 .resources {
     height: 100%;
     display: flex;
@@ -175,16 +160,13 @@ footer p {
         align-items: center;
     }
 
-    /* .left-column, .right-column {
-        width: 100%;
-    } */
-
     .about-me .text-content, .location .text-content {
         flex-direction: column;
         align-items: flex-start; /* Adjust to stack vertically on small screens */
     }
 }
+
+/* Figcaption styling */
 figcaption {
     text-align: center;
-    /* padding: 10px; */
 }
