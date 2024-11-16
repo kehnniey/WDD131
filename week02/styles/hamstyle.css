@@ -1,0 +1,48 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hide the navigation menu by default on smaller screens */
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Start hidden */
+    background-color: #f4f4f4; /* Optional: background color for the menu */
+}
+
+.navigation li {
+    margin: 10px 0;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Styling the menu icon */
+#menu {
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Show the navigation menu when the 'active' class is applied */
+nav.active .navigation {
+    display: block;
+}
+
+/* Optional: Show the menu by default on larger screens */
+@media (min-width: 600px) {
+    .navigation {
+        display: flex;
+        gap: 15px;
+    }
+
+    #menu {
+        display: none; /* Hide menu icon on larger screens */
+    }
+}
