@@ -58,13 +58,13 @@
 	padding: 1rem;
 	text-align: center;
 	text-decoration: none;
-	color: #2B0036; /* Dark purple text */
+	color: #2B0036; 
   }
   
   .navigation a:hover {
-	background-color: #bbb; /* Light gray hover background */
-	color: #333; /* Darker text on hover */
-	font-weight: 700; /* Bold text on hover */
+	background-color: #bbb; 
+	color: #333; 
+	font-weight: 700; 
   }
   
   /* When the menu is open */
@@ -72,28 +72,24 @@
 	display: block;
   }
   
-  /* Content Section */
-  /* .stuff {
-	margin: 0.5rem; Fixed typo in unit */
-	/* border: 1px solid rgba(0, 0, 0, 0.1); 
-	background-color: #bed; 
-	max-width: 580px; */
-	/* height: 100vh; Full viewport height
-  } */
+ 
   
   /* Album Section */
-  .album {
+ 
+.album {
 	display: grid;
-	gap: 1rem; 
-	padding: 1em;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	padding: 1rem;
   }
   
   .album figure {
-	text-align: center; /* Center-align text and images */
+	text-align: center; 
   }
   
   .album img {
-	max-width: 50%; /* Images scale to fit 50% of their container */
-	height: auto; /* Maintain aspect ratio */
+	max-width: 80%; 
+	height: auto; 
+	border-radius: 10px;
   }
   
