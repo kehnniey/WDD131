@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	
   }
   
   /* Typography */
@@ -81,6 +82,8 @@
 	grid-template-columns: 1fr;
 	gap: 1rem;
 	padding: 1rem;
+    border: 1px solid #6b46c1; 
+
   }
   
   .album figure {
