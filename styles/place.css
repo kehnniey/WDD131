@@ -1,3 +1,6 @@
+/* Import Google Font for better readability */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Container for the Hero Image */
 .hero {
     position: relative;
@@ -74,4 +77,4 @@
         color: white;
         border-radius: 8px;
     }
-}
+} */
