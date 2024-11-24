@@ -1,14 +1,7 @@
 /* Import Google Font for better readability */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Define global variables in :root for easy theme management */
-:root {
-    --primary-color: #d32f2f;    /* Red for header and footer */
-    --secondary-color: #f4d03f;  /* Yellow for accent */
-    --overlay-bg: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
-    --text-color: white;  /* White for text in overlay */
-    --font-family: Arial, sans-serif; /* Default font family */
-}
+
 
 
 /* Container for the Hero Image */
