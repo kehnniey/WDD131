@@ -25,7 +25,9 @@
             <div class="image-container">
                 <img 
                     srcset="images/cov-small.webp 600w, images/cov-medium.webp 1000w" 
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     src="images/cov-large.webp" 
+                    
                     alt="Scenic view of Coventry, Rhode Island" 
                     class="hero-image">
                 <div class="overlay">
@@ -73,7 +75,7 @@
     
         <section class="standalone-weather">
             <h2>Weather</h2>
-            <p id="weather-icon" class="weather-icon-wide">⛅</p>
+            <p id="weather-icon-mobile" class="weather-icon-wide">⛅</p>
             <img src="images/weather_clouds.svg" alt="Weather Icon" class="weather-icon-mobile"> <!-- Mobile view icon (SVG) -->
             <ul>
                 <li><strong>Temperature:</strong> 15°C</li>
