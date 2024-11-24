@@ -4,7 +4,7 @@
 /* Define global variables in :root for easy theme management */
 :root {
     --primary-color: #003366;    /* blue for header and footer */
-    --secondary-color: #f4d03f;  /* Yellow for accent */
+    --secondary-color: #f4d03f;  
     --overlay-bg: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
     --text-color: white;  /* White for text in overlay */
     --font-family: Arial, sans-serif; /* Default font family */
@@ -19,21 +19,21 @@
 header, footer {
     display: flex;
     align-items: center; 
-    background-color: #4b2e83; 
+    background-color: var(--primary-color); 
     padding: 1rem 2rem; 
-    color: white; 
-    border-bottom: 2px solid #6b46c1; 
+    color: var( --text-color); 
+    /* border-bottom: 2px solid #6b46c1;  */
   }
 
 .header-box {
-    background-color: #003366; 
-    color: #ffffff;
+    background-color: var(--primary-color); 
+    color: var( --text-color);
     padding: 20px;
 }
 
 h2{
-    background-color: #003366;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var( --text-color);
     width: 100%;
     text-align: center;
     padding: 1rem 0;
@@ -44,7 +44,7 @@ h2{
 .hero {
     position: relative;
     width: 100%;
-    height: 80vh; /* Adjust height based on your preference */
+    height: 80vh; 
     
 }
 
@@ -74,8 +74,6 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: var(--overlay-bg);  */
-    /* Semi-transparent black background */
     color: var(--text-color);
     display: flex;
     justify-content: space-between;
@@ -88,7 +86,7 @@ ul {
 .overlay h2 {
     margin-top: 0;
     background-color: var(--overlay-bg);
-    /* color: var(--secondary-color); */
+    
 }
 
 /* Data Section inside the overlay */
@@ -120,15 +118,15 @@ footer::after {
     color: var(--secondary-color); 
     padding-left: 10px;
 }
-footer {
+/* footer {
     background-color: #003366;
     color: #ffffff;
     width: 100%;
-    /* text-align: center; */
+    text-align: center; 
     padding: 1rem 0;
     font-size: 0.9em;
     margin-top: 20px;
-}
+} */
 footer p {
     margin: 5px;
 }
@@ -136,11 +134,10 @@ footer p {
 @media (max-width: 768px) {
     /* Show standalone sections on small screens */
     .overlay {
-        display: none; /* Hide the overlay for small screens */
+        display: none; 
     }
     .standalone-data, .standalone-weather {
-        display: block; 
-        /* Show the standalone sections */
+        display: block;  /* Show the standalone sections */
     }
 
     /* Mobile-specific styling for sections */
@@ -155,13 +152,14 @@ footer p {
 
     /* Styling for the weather icon in mobile view */
     .weather-icon-wide {
-        display: none; /* Hide the text icon in mobile view */
+        display: none; 
     }
     .weather-icon-mobile {
         display: block; 
         width: 60px;    
         height: auto; 
-        position: relative;
-          /* Keep the aspect ratio intact */
+        position: absolute;
+                
+       
     }
 }
