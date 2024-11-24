@@ -3,7 +3,7 @@
 
 /* Define global variables in :root for easy theme management */
 :root {
-    --primary-color: #d32f2f;    /* Red for header and footer */
+    --primary-color: #003366;    /* blue for header and footer */
     --secondary-color: #f4d03f;  /* Yellow for accent */
     --overlay-bg: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
     --text-color: white;  /* White for text in overlay */
@@ -16,15 +16,14 @@
     padding: 0;
 }
 
-header {
-    background-color: #003366;
-    color: #ffffff;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: .9em;
-    margin-top: 20px;
-}
+header, footer {
+    display: flex;
+    align-items: center; 
+    background-color: #4b2e83; 
+    padding: 1rem 2rem; 
+    color: white; 
+    border-bottom: 2px solid #6b46c1; 
+  }
 
 .header-box {
     background-color: #003366; 
@@ -57,8 +56,8 @@ h2{
 
 .hero-image {
     width: 100%;
-    height: 95%;
-    object-fit: cover; /* Makes sure the image covers the entire space without distorting */
+    height: 90%;
+    object-fit: cover; 
 }
 ul {
     
@@ -116,16 +115,16 @@ ul {
 
 /* Footer with additional content */
 footer::after {
-    content: " | Powered by Coventry Info"; /* Content added after the footer text */
+    content: " | Powered by Coventry Info"; 
     font-style: italic;
-    color: var(--secondary-color); /* Use the secondary color for extra content */
+    color: var(--secondary-color); 
     padding-left: 10px;
 }
 footer {
     background-color: #003366;
     color: #ffffff;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     padding: 1rem 0;
     font-size: 0.9em;
     margin-top: 20px;
@@ -159,9 +158,10 @@ footer p {
         display: none; /* Hide the text icon in mobile view */
     }
     .weather-icon-mobile {
-        display: block; /* Show the SVG icon in mobile view */
-        width: 60px;    /* Set a different width for mobile view */
+        display: block; 
+        width: 60px;    
         height: auto; 
+        position: relative;
           /* Keep the aspect ratio intact */
     }
 }
