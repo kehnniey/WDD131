@@ -6,13 +6,13 @@
     <title>Coventry, Rhode Island</title>
     <meta name="description" content="Scenic Location">
     <meta name="author" content="Kehinde Ojo">
-
-    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    
     <link rel="stylesheet" href="styles/place.css">
-    <script defer src="scripts/place.js"></script>
+    <!-- <script defer src="scripts/place.js"></script> -->
+    <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,7 +26,6 @@
             <div class="image-container">
                 <img 
                     srcset="images/cov-small.webp 600w, images/cov-medium.webp 1000w" 
-                    sizes="(max-width: 768px) 100vw, 50vw"
                     src="images/cov-large.webp"                     
                     alt="Scenic view of Coventry, Rhode Island" 
                     class="hero-image">
@@ -85,7 +84,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 by <strong>Coventry Information</strong> | Last modified: <span id="last-modified"></span></p>
+           <p>&copy; <span id="currentyear"> <strong>Coventry Information</strong> | Last modified: <span id="Last updated:"></span></p>
     </footer>
 </body>
 </html>

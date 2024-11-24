@@ -1,27 +1,72 @@
 /* Import Google Font for better readability */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Define global variables in :root for easy theme management */
+:root {
+    --primary-color: #d32f2f;    /* Red for header and footer */
+    --secondary-color: #f4d03f;  /* Yellow for accent */
+    --overlay-bg: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    --text-color: white;  /* White for text in overlay */
+    --font-family: Arial, sans-serif; /* Default font family */
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background-color: #003366;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: .9em;
+    margin-top: 20px;
+}
 
+.header-box {
+    background-color: #003366; 
+    color: #ffffff;
+    padding: 20px;
+}
+
+h2{
+    background-color: #003366;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    /* font-size: 0.9em; */
+    margin-top: 10px;
+}
 /* Container for the Hero Image */
 .hero {
     position: relative;
     width: 100%;
     height: 80vh; /* Adjust height based on your preference */
+    
 }
 
 .image-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 97%;
 }
 
 .hero-image {
     width: 100%;
-    height: 100%;
+    height: 95%;
     object-fit: cover; /* Makes sure the image covers the entire space without distorting */
 }
+ul {
+    
+    list-style: none; 
+    margin: 0 ; 
+    padding: 0; 
+    text-align: center;
+  }
 
 /* Overlay for Data and Weather Sections */
 .overlay {
@@ -30,8 +75,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
-    color: white;
+    /* background-color: var(--overlay-bg);  */
+    /* Semi-transparent black background */
+    color: var(--text-color);
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -42,19 +88,25 @@
 
 .overlay h2 {
     margin-top: 0;
-    color: white;
+    background-color: var(--overlay-bg);
+    /* color: var(--secondary-color); */
 }
 
 /* Data Section inside the overlay */
 .data {
     flex: 1;
     margin-bottom: 20px;
+    /* background-color: var(--overlay-bg); */
+    
 }
 
 /* Weather Section inside the overlay */
 .weather {
     flex: 1;
     margin-top: 20px;
+    /* background-color: var(--overlay-bg); */
+    
+    
 }
 
 /* Standalone sections for mobile view */
@@ -62,6 +114,25 @@
     display: none; /* Initially hide the standalone sections */
 }
 
+/* Footer with additional content */
+footer::after {
+    content: " | Powered by Coventry Info"; /* Content added after the footer text */
+    font-style: italic;
+    color: var(--secondary-color); /* Use the secondary color for extra content */
+    padding-left: 10px;
+}
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+footer p {
+    margin: 5px;
+}
 /* Responsive Design for Mobile View */
 @media (max-width: 768px) {
     /* Show standalone sections on small screens */
@@ -69,49 +140,28 @@
         display: none; /* Hide the overlay for small screens */
     }
     .standalone-data, .standalone-weather {
-        display: block; /* Show the standalone sections */
+        display: block; 
+        /* Show the standalone sections */
     }
 
-/* Styling for the weather icon in wide view */
-/* .weather-icon-wide {
-    display: none;  /* Show the text icon in wide view */
-/* }  */
+    /* Mobile-specific styling for sections */
+    .standalone-data, .standalone-weather {
+        margin: 10px;
+        padding: 15px;
+        background-color: #003366; 
+        color: white;
+        border-radius: 8px;
+        
+    }
 
-/* Styling for the weather icon in mobile view */
-/* .weather-icon-mobile {
-    display: none;  */
-    /* Hide the SVG icon in wide view */
-    /* width: 50px;   */
-     /* Set the size of the mobile icon */
-    /* height: auto; */
-/* } */
-
-/* Responsive Design for Mobile View */
-@media (max-width: 768px) {
+    /* Styling for the weather icon in mobile view */
     .weather-icon-wide {
         display: none; /* Hide the text icon in mobile view */
     }
     .weather-icon-mobile {
         display: block; /* Show the SVG icon in mobile view */
         width: 60px;    /* Set a different width for mobile view */
-        height: auto;   /* Keep the aspect ratio intact */
+        height: auto; 
+          /* Keep the aspect ratio intact */
     }
-}
-
-
-    /* Mobile-specific styling for sections */
-    .standalone-data, .standalone-weather {
-        margin: 10px;
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.7); /* Darker background to contrast with text */
-        color: white;
-        border-radius: 8px;
-    }
-} 
-
-footer::after {
-    content: " | Powered by Coventry Info"; /* Content added after the footer text */
-    font-style: italic;
-    color: var(--secondary-color); /* Use the secondary color for extra content */
-    padding-left: 10px;
 }
