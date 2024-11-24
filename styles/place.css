@@ -79,6 +79,33 @@
         display: block; /* Show the standalone sections */
     }
 
+/* Styling for the weather icon in wide view */
+/* .weather-icon-wide {
+    display: none;  /* Show the text icon in wide view */
+/* }  */
+
+/* Styling for the weather icon in mobile view */
+/* .weather-icon-mobile {
+    display: none;  */
+    /* Hide the SVG icon in wide view */
+    /* width: 50px;   */
+     /* Set the size of the mobile icon */
+    /* height: auto; */
+/* } */
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .weather-icon-wide {
+        display: none; /* Hide the text icon in mobile view */
+    }
+    .weather-icon-mobile {
+        display: block; /* Show the SVG icon in mobile view */
+        width: 60px;    /* Set a different width for mobile view */
+        height: auto;   /* Keep the aspect ratio intact */
+    }
+}
+
+
     /* Mobile-specific styling for sections */
     .standalone-data, .standalone-weather {
         margin: 10px;

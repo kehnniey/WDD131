@@ -6,7 +6,7 @@
     <title>Coventry, Rhode Island</title>
     <meta name="description" content="Scenic Location">
     <meta name="author" content="Kehinde Ojo">
-    
+
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -24,8 +24,8 @@
         <section class="hero">
             <div class="image-container">
                 <img 
-                    srcset="images/small.webp 600w, images/medium.webp 1000w" 
-                    src="images/large.webp" 
+                    srcset="images/cov-small.webp 600w, images/cov-medium.webp 1000w" 
+                    src="images/cov-large.webp" 
                     alt="Scenic view of Coventry, Rhode Island" 
                     class="hero-image">
                 <div class="overlay">
@@ -73,7 +73,8 @@
     
         <section class="standalone-weather">
             <h2>Weather</h2>
-            <p id="weather-icon">⛅</p>
+            <p id="weather-icon" class="weather-icon-wide">⛅</p>
+            <img src="images/weather_clouds.svg" alt="Weather Icon" class="weather-icon-mobile"> <!-- Mobile view icon (SVG) -->
             <ul>
                 <li><strong>Temperature:</strong> 15°C</li>
                 <li><strong>Condition:</strong> Mostly Cloudy</li>
