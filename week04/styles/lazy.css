@@ -1,0 +1,72 @@
+/* Root Variables */
+:root {
+    --primary-color: #003366;    /* Blue for header and footer */
+    --secondary-color: #f4d03f;  /* Accent color */
+    --overlay-bg: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    --text-color: white;         /* White for text in overlay */
+    --font-family: Arial, sans-serif; /* Default font family */
+}
+
+/* General Reset */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    text-align: center;
+    background-color: var(--secondary-color); /* Light yellow background */
+    color: var(--primary-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1em 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Section */
+main {
+    padding: 1em;
+}
+
+main img {
+    display: block;
+    width: 400px;
+    height: 600px;
+    margin: 20px auto;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    background-color: var(--overlay-bg); /* Placeholder background color */
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Lazy Load Effect */
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Placeholder Content Before Images Load */
+main img::before {
+    content: "Loading...";
+    position: absolute;
+    color: var(--text-color);
+    background-color: var(--overlay-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+    z-index: 1;
+}
