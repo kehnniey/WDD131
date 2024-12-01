@@ -64,6 +64,13 @@ const temples = [
 		dedicated: "1999, November, 20",
 		area: 33800,
 		imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/boise-idaho/2018/400x250/3-Boise-Idaho-Temple-1198985.jpg"
+	  },
+	  {
+		templeName: "Preston England",
+		location: "Preston, England",
+		dedicated: "1998, June, 7",
+		area: 33800,
+		imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/preston-england/400x250/preston-temple-765118-wallpaper.jpg"
 	  }
   ];
   

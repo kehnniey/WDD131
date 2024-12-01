@@ -213,7 +213,7 @@ footer p {
     }
 
     #temple-cards {
-        grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+        grid-template-columns: repeat(5, 1fr); /* Three columns for larger screens */
         gap: 1.5rem;
         
     }
