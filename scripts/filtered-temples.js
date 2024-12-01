@@ -1,3 +1,6 @@
+
+// Temple card
+
 const temples = [
 	{
 	  templeName: "Aba Nigeria",
@@ -85,7 +88,7 @@ const temples = [
   // Function to display temples
   function displayTemples(filteredTemples) {
 	const templeCardsSection = document.getElementById('temple-cards');
-	templeCardsSection.innerHTML = '';  // Clear any existing cards
+	templeCardsSection.innerHTML = '';  
 	
 	filteredTemples.forEach(temple => {
 	  const templeCard = createTempleCard(temple);
