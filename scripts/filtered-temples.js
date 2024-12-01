@@ -120,3 +120,16 @@ const temples = [
   document.getElementById('large').addEventListener('click', () => displayTemples(temples.filter(temple => temple.area > 90000)));
   document.getElementById('small').addEventListener('click', () => displayTemples(temples.filter(temple => temple.area < 10000)));
   
+
+  // Hamburger Menu Toggle
+document.addEventListener("DOMContentLoaded", function () {
+	const hamButton = document.querySelector("#");
+	const navigation = document.querySelector(".nav");
+  
+	if (hamButton && navigation) {
+	  hamButton.addEventListener("click", () => {
+		navigation.classList.toggle("open");
+		hamButton.classList.toggle("open");
+	  });
+	}
+  });

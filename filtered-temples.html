@@ -7,14 +7,17 @@
     <meta name="description" content="Temple Album.">
     <meta name="author" content="Kehinde Ojo">
 
-  <link rel="stylesheet" href="styles/filtered-temples.css"> <!-- Link to CSS file -->
+  <link rel="stylesheet" href="styles/filtered-temples.css"> 
+  <!-- <link rel="stylesheet" href="styles/filtered-temples-large.css">  -->
+  
   <script defer src="scripts/filtered-temples.js"></script>
 </head>
 <body>
   <header>
     <h1>Temple Album</h1>
     <nav>
-      <ul>
+      <button id="menu" aria-label="Toggle navigation menu"></button>
+      <ul class="navigation">
         <li><a href="#" id="home">Home</a></li>
         <li><a href="#" id="old">Old</a></li>
         <li><a href="#" id="new">New</a></li>
@@ -25,7 +28,7 @@
   </header>
     
   <main>
-    <h2>Home</h2>
+    <h2>Temple List</h2>
     <section id="temple-cards"></section>
   </main>
 
