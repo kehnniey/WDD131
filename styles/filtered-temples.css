@@ -124,6 +124,15 @@ footer p {
 }
 
 /* Temple Cards */
+  
+.temple-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+
 #temple-cards {
     display: grid;
     grid-template-columns: 1fr; /* Default single column */
@@ -172,8 +181,8 @@ footer p {
 
 .temple-image {
     width: 100%;
-    max-height: 305px;
-    object-fit: cover;
+    max-height: 350px;
+    /* object-fit: cover; */
     border-radius: 8px;
   }
 /* Responsive Media Queries */
@@ -206,5 +215,6 @@ footer p {
     #temple-cards {
         grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
         gap: 1.5rem;
+        
     }
 }
