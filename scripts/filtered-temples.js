@@ -126,7 +126,7 @@ const temples = [
 
   // Hamburger Menu Toggle
 document.addEventListener("DOMContentLoaded", function () {
-	const hamButton = document.querySelector("#");
+	const hamButton = document.querySelector("#menu");
 	const navigation = document.querySelector(".nav");
   
 	if (hamButton && navigation) {
