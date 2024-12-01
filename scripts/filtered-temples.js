@@ -136,3 +136,30 @@ document.addEventListener("DOMContentLoaded", function () {
 	  });
 	}
   });
+
+
+  // Check if cookies are enabled and show a consent banner
+if (navigator.cookieEnabled) {
+    const consentBanner = document.createElement('div');
+    consentBanner.id = 'cookie-consent';
+    consentBanner.style.position = 'fixed';
+    consentBanner.style.bottom = '0';
+    consentBanner.style.width = '100%';
+    consentBanner.style.backgroundColor = '#333';
+    consentBanner.style.color = '#fff';
+    consentBanner.style.padding = '1rem';
+    consentBanner.style.textAlign = 'center';
+    consentBanner.style.zIndex = '1000';
+
+    consentBanner.innerHTML = `
+        <p>We use cookies to improve your experience. By using this site, you agree to our cookie policy.
+        <button id="accept-cookies" style="margin-left: 10px; padding: 5px 10px;">Accept</button></p>
+    `;
+
+    document.body.appendChild(consentBanner);
+
+    document.getElementById('accept-cookies').addEventListener('click', () => {
+        document.cookie = "userConsent=true; SameSite=Strict; Secure";
+        document.getElementById('cookie-consent').remove();
+    });
+}
