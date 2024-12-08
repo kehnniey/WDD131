@@ -6,7 +6,9 @@ document.getElementById('last-modified').textContent = document.lastModified;
 const products = [
     { id: 1, name: "Product A" },
     { id: 2, name: "Product B" },
-    { id: 3, name: "Product C" }
+    { id: 3, name: "Product C" },
+    { id: 4, name: "Product D" },
+    { id: '...', name: "Product ..." }
   ];
   
   // Populate Product Options

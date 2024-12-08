@@ -8,70 +8,68 @@
     <meta name="author" content="Kehinde Ojo">
     
     <link rel="stylesheet" href="styles/form.css"> 
-  
-  
     <script defer src="scripts/form.js"></script>
 </head>
-
-  <body>
+<body>
     <main>
-      <h1>Product Review Form</h1>
-      <form method="get" action="review.html">
-        <!-- Product Name -->
-        <label for="product-name">Product Name:</label>
-        <select id="product-name" name="product" required>
-          <option value="" disabled selected>Select a Product ...</option>
-          <!-- Dynamic options will be populated via JavaScript -->
-        </select>
-  
-        <!-- Overall Rating -->
-        <fieldset>
-          <legend>Overall Rating:</legend>
-          <label>
-            <input type="radio" id="star1" name="rating" value="1" required> ☆
-          </label>
-          <label>
-            <input type="radio" id="star2" name="rating" value="2"> ☆☆
-          </label>
-          <label>
-            <input type="radio" id="star3" name="rating" value="3"> ☆☆☆
-          </label>
-          <label>
-            <input type="radio" id="star4" name="rating" value="4"> ☆☆☆☆
-          </label>
-          <label>
-            <input type="radio" id="star5" name="rating" value="5"> ☆☆☆☆☆
-          </label>
-        </fieldset>
-  
-        <!-- Date of Installation -->
-        <label for="installation-date">Date of Installation:</label>
-        <input type="date" id="installation-date" name="installation_date" required>
-  
-        <!-- Useful Features -->
-        <fieldset>
-          <legend>Which features  did you find useful? (Check all that apply):</legend>
-          <label><input type="checkbox" id="feature1" name="features" value="Feature1"> Durability</label>
-          <label><input type="checkbox" id="feature2" name="features" value="Feature2"> Easy of Use</label>
-          <label><input type="checkbox" id="feature3" name="features" value="Feature3"> Performance</label>
-          <label><input type="checkbox" id="feature4" name="features" value="Feature3"> Design</label>
-        </fieldset>
-  
-        <!-- Written Review -->
-        <label for="review">Written Review (optional):</label>
-        <textarea id="review" name="review"></textarea>
-  
-        <!-- User Name -->
-        <label for="user-name">Your Name (optional):</label>
-        <input type="text" id="user-name" name="user_name">
-  
-        <!-- Submit Button -->
-        <button type="submit">Submit Review</button>
-      </form>
+        <h1>Product Review Form</h1>
+        <p><span class="required">*</span> Indicates a required field</p>
+        <form method="get" action="review.html">
+            <!-- Product Name -->
+            <label for="product-name">Product Name <span class="required">*</span>:</label>
+            <select id="product-name" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <!-- Dynamic options will be populated via JavaScript -->
+            </select>
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating <span class="required">*</span>:</legend>
+                <label>
+                    <input type="radio" id="star1" name="rating" value="1" required> ☆
+                </label>
+                <label>
+                    <input type="radio" id="star2" name="rating" value="2"> ☆☆
+                </label>
+                <label>
+                    <input type="radio" id="star3" name="rating" value="3"> ☆☆☆
+                </label>
+                <label>
+                    <input type="radio" id="star4" name="rating" value="4"> ☆☆☆☆
+                </label>
+                <label>
+                    <input type="radio" id="star5" name="rating" value="5"> ☆☆☆☆☆
+                </label>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <label for="installation-date">Date of Installation <span class="required">*</span>:</label>
+            <input type="date" id="installation-date" name="installation_date" required>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Which features did you find useful? (Check all that apply):</legend>
+                <label><input type="checkbox" id="feature1" name="features" value="Feature1"> Durability</label>
+                <label><input type="checkbox" id="feature2" name="features" value="Feature2"> Ease of Use</label>
+                <label><input type="checkbox" id="feature3" name="features" value="Feature3"> Performance</label>
+                <label><input type="checkbox" id="feature4" name="features" value="Feature4"> Design</label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="review">Written Review (optional):</label>
+            <textarea id="review" name="review"></textarea>
+
+            <!-- User Name -->
+            <label for="user-name">Your Name (optional):</label>
+            <input type="text" id="user-name" name="user_name">
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Review</button>
+        </form>
     </main>
-  
+
     <footer>
         <p>&copy; <span id="current-year"></span> Kehinde O. Ojo. All rights reserved. Last modified: <span id="last-modified"></span></p>
-  </footer>
+    </footer>
 </body>
 </html>
