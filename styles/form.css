@@ -1,8 +1,7 @@
-    /* Import Google Font for better readability */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
 /* Style the form elements */
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Roboto', sans-serif;;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
