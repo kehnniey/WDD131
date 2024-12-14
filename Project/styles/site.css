@@ -1,4 +1,4 @@
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,6 +7,19 @@ body {
     line-height: 1.6;
 }
 
+button {
+    padding: 10px;
+    background-color: #4e504e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3d3f3d;
+}
+
+/* Header */
 header {
     background-color: #333;
     color: white;
@@ -15,22 +28,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
-/* header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;  Center the content horizontally
-} */
-
-/* h1 {
-    display: inline-flex;  Makes the h1 behave like a flex container
-    justify-content: space-between; Distributes space between words
-    gap: 10px;  Adjust the gap between the two words
-} */
-
 
 header #logo img {
     height: 50px;
@@ -50,11 +47,24 @@ header nav ul li a {
     font-weight: bold;
 }
 
-#menu-icon, #close-icon {
-    display: none;
-    font-size: 1.5rem;
+#menu {
+    display: none; /* Hidden by default for larger screens */
+    font-size: 2rem;
     cursor: pointer;
-    align-items: left;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+}
+
+/* Default menu icon */
+#menu::before {
+    content: "☰"; /* Hamburger icon */
+}
+
+/* When menu is open, show close icon */
+#menu.open::before {
+    content: "❎"; /* Close icon */
 }
 
 /* Hero Section */
@@ -135,7 +145,7 @@ main section h2 {
 }
 
 #progress-tracker button {
-    background: #ff4d4d;
+    background: #333;
     color: white;
     border: none;
     border-radius: 5px;
@@ -161,86 +171,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Styles */
-@media (min-width: 768px) {
-    #menu-icon {
-        display: none;
-    }
-
-    main {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Button Styles */
-button {
-    padding: 10px;
-    background-color: #4e504e;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #4e504e;
-}
-
-/* Navigation Menu Styles */
-#nav-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-
-/* #nav-list li {
-    display: inline;
-} */
-
-/* Mobile Menu */
-@media (max-width: 768px) {
-    #nav-list {
-        display: none; 
-        position: relative;
-        top: 60px;
-        right: 0;
-        background-color: #333;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    #nav-list li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    #menu-icon, #close-icon {
-        display: block;
-        color: white;
-        
-    }
-
-    #close-icon {
-        position: relative;
-        top: 20px;
-        right: 20px;
-    }
-}
-
-
-.remove-tip {
-    margin-left: 10px;
-    color: red;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.remove-tip:hover {
-    text-decoration: underline;
-}
-
 footer .social {
     display: flex;
     justify-content: center;
@@ -256,4 +186,60 @@ footer .social img {
     height: 30px;
 }
 
+/* Responsive Styles */
+@media (min-width: 768px) {
+    #menu {
+        display: none; /* Hidden on larger screens */
+    }
 
+    main {
+        grid-template-columns: repeat(3, 1fr); /* Adjust grid layout */
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    #menu {
+        display: block; /* Show menu icon on smaller screens */
+        z-index: 1100; /* Keeps it above the nav menu */
+    }
+
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000; /* Ensures it overlays content */
+    }
+
+    .nav.open {
+        display: flex; /* Show menu when open class is added */
+    }
+
+    .nav li {
+        text-align: center; /* Centers the menu items */
+        margin: 10px 0;
+    }
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0.5rem 0;
+    }
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem; /* Ensure padding matches the desktop style */
+    border-radius: 5px;   /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light translucent hover background */
+}

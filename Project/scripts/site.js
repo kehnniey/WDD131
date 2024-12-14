@@ -3,34 +3,46 @@ document.getElementById('last-modified').textContent = document.lastModified;
   
 
 
-// JavaScript for handling mobile menu toggle
-function toggleMenu() {
-    const navList = document.getElementById("nav-list");
-    navList.classList.toggle("show");
-}
+// // JavaScript for handling mobile menu toggle
+// function toggleMenu() {
+//     const navList = document.getElementById("nav-list");
+//     navList.classList.toggle("show");
+// }
 
-// Adding event listener to handle page load and other features
-document.addEventListener("DOMContentLoaded", () => {
-    // You could initialize any dynamic features here if needed
-});
+// // Adding event listener to handle page load and other features
+// document.addEventListener("DOMContentLoaded", () => {
+//     // You could initialize any dynamic features here if needed
+// });
 
-function toggleMenu() {
-    const navList = document.getElementById('nav-list');
-    const closeIcon = document.getElementById('close-icon');
-    const menuIcon = document.getElementById('menu-icon');
+// function toggleMenu() {
+//     const navList = document.getElementById('nav-list');
+//     const closeIcon = document.getElementById('close-icon');
+//     const menuIcon = document.getElementById('menu-icon');
     
-    // Toggle the visibility of the nav list
-    if (navList.style.display === 'block') {
-        navList.style.display = 'none';
-        closeIcon.style.display = 'none';
-        menuIcon.style.display = 'block';
-    } else {
-        navList.style.display = 'block';
-        closeIcon.style.display = 'block';
-        menuIcon.style.display = 'none';
-    }
-}
+//     // Toggle the visibility of the nav list
+//     if (navList.style.display === 'block') {
+//         navList.style.display = 'none';
+//         closeIcon.style.display = 'none';
+//         menuIcon.style.display = 'block';
+//     } else {
+//         navList.style.display = 'block';
+//         closeIcon.style.display = 'block';
+//         menuIcon.style.display = 'none';
+//     }
+// }
 
+ // Hamburger Menu Toggle
+ document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector("#menu");
+    const navList = document.querySelector("#nav-list");
+
+    if (menuButton && navList) {
+        menuButton.addEventListener("click", () => {
+            navList.classList.toggle("open"); // Toggle the menu
+            menuButton.classList.toggle("open"); // Change icon state
+        });
+    }
+});
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const hamButton = document.querySelector("#menu-icon"); // Hamburger button
