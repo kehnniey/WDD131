@@ -31,6 +31,31 @@ function toggleMenu() {
     }
 }
 
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const hamButton = document.querySelector("#menu-icon"); // Hamburger button
+//     const navigation = document.querySelector("#nav-list"); // Navigation menu
+//     const closeIcon = document.querySelector("#close-icon"); // Close icon
+
+//     if (hamButton && navigation && closeIcon) {
+//         hamButton.addEventListener("click", () => {
+//             // Toggle the 'active' class to open the navigation and show the close icon
+//             navigation.classList.toggle("active");
+//             closeIcon.classList.toggle("active");
+//             hamButton.classList.toggle("active");
+//         });
+
+//         // Close the menu when the close icon is clicked
+//         closeIcon.addEventListener("click", () => {
+//             navigation.classList.remove("active");
+//             closeIcon.classList.remove("active");
+//             hamButton.classList.remove("active");
+//         });
+//     }
+// });
+
+
+
 // Workout Planner: Add and Remove Workouts
 function addWorkout() {
     const workoutInput = document.getElementById('workout-input');
@@ -284,5 +309,56 @@ ddocument.addEventListener('DOMContentLoaded', () => {
     // Initial load of tips
     loadTips();
 });
+
+// Wait for the page to fully load
+window.onload = function() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    
+    // Example data (this could be replaced with user input or dynamic data)
+    var progressData = {
+        labels: ['January', 'February', 'March', 'April', 'May'],  // Months
+        datasets: [{
+            label: 'Progress (%)',
+            data: [45, 60, 75, 50, 90],  // Example progress percentages
+            backgroundColor: 'rgba(54, 162, 235, 0.2)', // Bar color
+            borderColor: 'rgba(54, 162, 235, 1)',     // Border color
+            borderWidth: 1
+        }]
+    };
+
+    // Chart configuration
+    var config = {
+        type: 'bar',  // Bar chart type
+        data: progressData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true
+        }
+    };
+
+    // Create the chart
+    new Chart(ctx, config);
+};
+
+// Assuming a form is used to collect progress data
+document.getElementById('progress-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get data from form
+    var month = document.getElementById('month').value;
+    var progress = document.getElementById('progress').value;
+
+    // Update the chart data
+    progressData.labels.push(month);  // Add the new month to labels
+    progressData.datasets[0].data.push(progress);  // Add the progress percentage
+
+    // Update the chart to reflect the new data
+    myChart.update();
+});
+
 
 

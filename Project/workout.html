@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Planner - Fitness Tracker Hub</title>
+    <meta name="description" content="Workout Planner">
+    <meta name="author" content="Kehinde Ojo">
     <link rel="stylesheet" href="styles/site.css">
     <script defer src="scripts/site.js"></script>
 </head>
 <body>
     <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="images/fitnesslogo.jpg" alt="Fitness Tracker Hub Logo" />
+            </a>
+        </div>
         <nav>
+            
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="workout.html">Workout Planner</a></li>
-                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="workout.html">Workout-Planner</a></li>
+                <li><a href="progress.html">Progress-Tracker</a></li>
                 <li><a href="tips.html">Tips</a></li>
             </ul>
         </nav>
@@ -22,6 +30,17 @@
     <main>
         <h1>Plan Your Workouts</h1>
         <p>Customize your workout routine with a variety of exercises and sets. Track your fitness journey with ease.</p>
+
+        <!-- How to Use Section -->
+        <section id="how-to-use">
+            <h2>How to Use the Workout Planner</h2>
+            <ul>
+                <li><strong>Choose Workout Type:</strong> Select the type of workout (Cardio, Strength, Flexibility) from the dropdown menu.</li>
+                <li><strong>Enter Exercise:</strong> Type the name of the exercise you'd like to add to your workout routine in the input field.</li>
+                <li><strong>Save Workout:</strong> After selecting your workout type and entering an exercise, click the "Save Workout" button to add it to your workout list.</li>
+                <li><strong>View Saved Workouts:</strong> Your saved workouts will be displayed in a list below. You can track your exercises and ensure your routine stays varied.</li>
+            </ul>
+        </section>
 
         <form id="workout-form" aria-labelledby="workout-form-section">
             <fieldset>
@@ -49,6 +68,11 @@
 
     <footer>
         <p>&copy; <span id="current-year"></span> Fitness Tracker Hub. Kehinde O. Ojo. All rights reserved. Last modified: <span id="last-modified"></span></p>
+        <div class="social">
+            <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://x.com/"><img src="images/x-icon.png" alt="X"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
     </footer>
 </body>
 </html>

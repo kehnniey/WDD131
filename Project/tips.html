@@ -4,30 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Tips - Fitness Tracker Hub</title>
+    <meta name="description" content="Workout tips">
+    <meta name="author" content="Kehinde Ojo">
     <link rel="stylesheet" href="styles/site.css">
     <script defer src="scripts/site.js"></script>
 </head>
+
 <body>
     <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="images/fitnesslogo.jpg" alt="Fitness Tracker Hub Logo" />
+            </a>
+        </div>
         <nav>
+           
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="workout.html">Workout Planner</a></li>
-                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="workout.html">Workout-Planner</a></li>
+                <li><a href="progress.html">Progress-Tracker</a></li>
                 <li><a href="tips.html">Tips</a></li>
             </ul>
         </nav>
     </header>
-
+    <section id="purpose">
+        
+        <h2>How to Use the Tips Page</h2>
+        <ul>
+            <li><strong>Get Fitness Tips:</strong> Read helpful tips designed to guide you in staying motivated, setting goals, and maintaining a balanced fitness routine.</li>
+            <li><strong>Add a New Tip:</strong> Share your personal fitness tips by entering them in the form. This helps expand the community of tips and support.</li>
+            <li><strong>Set Fitness Goals:</strong> Set specific fitness goals like weight, reps, or distance. These goals will help you track your progress and keep you focused on your fitness objectives.</li>
+            <li><strong>Clear Tips:</strong> If you'd like to reset the list of tips, click the "Clear All Tips" button to start fresh.</li>
+        </ul>
+    </section>
+    
     <main>
         <h1>Fitness Tips</h1>
         <p>Helpful advice to keep you on track with your fitness journey.</p>
 
         <!-- Display list of tips -->
         <ul id="tips-list">
-            <li>Stay hydrated during your workouts.</li>
-            <li>Set realistic goals and track your progress.</li>
-            <li>Rest and recovery are just as important as training.</li>
+            <!-- Tips will be added here dynamically -->
         </ul>
 
         <!-- Form to add a new tip -->
@@ -40,29 +57,19 @@
             </fieldset>
         </form>
 
+        <!-- Button to clear all tips -->
         <button id="clear-tips">Clear All Tips</button>
-
-        <!-- Random form for fitness goals (example) -->
-        <form id="fitness-goal-form">
-            <fieldset>
-                <legend>Set Fitness Goal</legend>
-                <label for="goal-type">Goal Type:</label>
-                <select id="goal-type" required>
-                    <option value="weight">Weight</option>
-                    <option value="reps">Reps</option>
-                    <option value="distance">Distance</option>
-                </select>
-
-                <label for="goal-value">Goal Value:</label>
-                <input type="number" id="goal-value" min="0" required>
-
-                <button type="submit">Save Goal</button>
-            </fieldset>
-        </form>
     </main>
 
     <footer>
         <p>&copy; <span id="current-year"></span> Fitness Tracker Hub. Kehinde O. Ojo. All rights reserved. Last modified: <span id="last-modified"></span></p>
+        <div class="social">
+            <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://x.com/"><img src="images/x-icon.png" alt="X"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
     </footer>
+
+    <script defer src="scripts/tips.js"></script>
 </body>
 </html>

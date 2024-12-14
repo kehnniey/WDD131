@@ -16,6 +16,22 @@ header {
     justify-content: space-between;
 }
 
+/* header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;  Center the content horizontally
+} */
+
+/* h1 {
+    display: inline-flex;  Makes the h1 behave like a flex container
+    justify-content: space-between; Distributes space between words
+    gap: 10px;  Adjust the gap between the two words
+} */
+
+
 header #logo img {
     height: 50px;
 }
@@ -38,6 +54,7 @@ header nav ul li a {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    align-items: left;
 }
 
 /* Hero Section */
@@ -176,15 +193,16 @@ button:hover {
     gap: 20px;
 }
 
-#nav-list li {
+
+/* #nav-list li {
     display: inline;
-}
+} */
 
 /* Mobile Menu */
 @media (max-width: 768px) {
     #nav-list {
         display: none; 
-        position: absolute;
+        position: relative;
         top: 60px;
         right: 0;
         background-color: #333;
@@ -201,11 +219,41 @@ button:hover {
     #menu-icon, #close-icon {
         display: block;
         color: white;
+        
     }
 
     #close-icon {
-        position: absolute;
+        position: relative;
         top: 20px;
         right: 20px;
     }
 }
+
+
+.remove-tip {
+    margin-left: 10px;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.remove-tip:hover {
+    text-decoration: underline;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer .social a {
+    margin: 0 10px;
+}
+
+footer .social img {
+    width: 30px;
+    height: 30px;
+}
+
+

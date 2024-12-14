@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Tracker Hub</title>
     <meta name="description" content="Fitness Tracker Hub helps users track their fitness activities, plan workouts, and monitor progress with an easy-to-use platform.">
+    <meta name="author" content="Kehinde Ojo">
     <link rel="stylesheet" href="styles/site.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="images/fitnesslogo.jpg" alt="Fitness Tracker Hub Logo" />
+            </a>
+        </div>
         <nav>
-            <div id="logo">
-                <a href="index.html">
-                    <img src="images/fitnesslogo.jpg" alt="Fitness Tracker Hub Logo" />
-                </a>
-            </div>
+            <!-- Hamburger Icon -->
             <div id="menu-icon" class="menu-icon" onclick="toggleMenu()">
-                &#9776; <!-- Hamburger Icon -->
+                &#9776; 
             </div>
             
             <ul id="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="workout.html">Workout Planner</a></li>
-                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="workout.html">Workout-Planner</a></li>
+                <li><a href="progress.html">Progress-Tracker</a></li>
                 <li><a href="tips.html">Tips</a></li>
             </ul>
-
+              <!-- Close Icon -->
             <div id="close-icon" class="close-icon" onclick="toggleMenu()">
-                &#10005; <!-- Close Icon -->
+                &#10005; 
             </div>
         </nav>
     </header>
@@ -95,6 +97,11 @@
     <!-- Footer Section -->
     <footer>
         <p>&copy; <span id="current-year"></span> Fitness Tracker Hub. Kehinde O. Ojo. All rights reserved. Last modified: <span id="last-modified"></span></p>
+        <div class="social">
+            <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://x.com/"><img src="images/x-icon.png" alt="X"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
     </footer>
 
     <!-- JavaScript -->
