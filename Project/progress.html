@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker - Fitness Tracker Hub</title>
+    <link rel="stylesheet" href="styles/site.css">
+    <script defer src="scripts/site.js"></script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workout.html">Workout Planner</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="tips.html">Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Track Your Fitness Progress</h1>
+        <p>Monitor your improvements with charts and logs.</p>
+
+        <!-- Form to add progress -->
+        <form id="progress-form">
+            <fieldset>
+                <legend>Enter Progress for a Month</legend>
+                <label for="month">Month:</label>
+                <select id="month" required>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                </select>
+
+                <label for="progress">Progress (%):</label>
+                <input type="number" id="progress" min="0" max="100" required>
+
+                <button type="submit">Save Progress</button>
+            </fieldset>
+        </form>
+
+        <!-- Chart -->
+        <div id="progress-chart">
+            <canvas id="myChart"></canvas>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Fitness Tracker Hub. Kehinde O. Ojo. All rights reserved. Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

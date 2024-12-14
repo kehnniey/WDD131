@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Hub</title>
+    <meta name="description" content="Fitness Tracker Hub helps users track their fitness activities, plan workouts, and monitor progress with an easy-to-use platform.">
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="images/fitnesslogo.jpg" alt="Fitness Tracker Hub Logo" />
+                </a>
+            </div>
+            <div id="menu-icon" class="menu-icon" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger Icon -->
+            </div>
+            
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workout.html">Workout Planner</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="tips.html">Tips</a></li>
+            </ul>
+
+            <div id="close-icon" class="close-icon" onclick="toggleMenu()">
+                &#10005; <!-- Close Icon -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Fitness Tracker Hub</h1>
+        <img src="images/activelifestyle.jpg" alt="Fitness Tracker Hub logo featuring an active lifestyle theme">
+        <p>Track your workouts, monitor progress, and stay motivated!</p>
+    </section>
+
+    <!-- Purpose and How to Use Section -->
+    <section id="purpose">
+        <h2>Purpose of Fitness Tracker Hub</h2>
+        <p>Fitness Tracker Hub is designed to help you stay on track with your fitness goals. Whether you're starting a workout routine, tracking your progress, or looking for expert tips, this platform provides all the tools you need for a healthy lifestyle.</p>
+        
+        <h2>How to Use This Website</h2>
+        <ul>
+            <li><strong>Workout Planner:</strong> Use this section to plan your workouts and add new routines to stay consistent.</li>
+            <li><strong>Progress Tracker:</strong> Log your activities and track the time you spend on each one to monitor your fitness progress.</li>
+            <li><strong>Fitness Tips:</strong> Check out expert fitness tips to stay motivated and improve your workouts.</li>
+        </ul>
+    </section>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Workout Planner Section -->
+        <section id="workout-planner">
+            <h2>Workout Planner</h2>
+            <p>Design your fitness routines and stay on track.</p>
+            <input type="text" id="workout-input" placeholder="Add a workout" />
+            <button onclick="addWorkout()">Add Workout</button>
+            <ul id="workout-list"></ul>
+        </section>
+
+        <!-- Progress Tracker Section -->
+        <section id="progress-tracker">
+            <h2>Progress Tracker</h2>
+            <p>Monitor your fitness progress and achievements.</p>
+            <input type="text" id="progress-input" placeholder="Activity name" />
+            <input type="number" id="time-input" placeholder="Time spent (minutes)" />
+            <button onclick="trackProgress()">Track Activity</button>
+            <table id="progress-table">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Time (minutes)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Fitness Tips Section -->
+        <section id="tips-section">
+            <h2>Fitness Tips</h2>
+            <p>Get expert advice on maintaining a healthy lifestyle.</p>
+            <button onclick="loadTips()">Get a Tip</button>
+            <div id="tips-container"></div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Fitness Tracker Hub. Kehinde O. Ojo. All rights reserved. Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/site.js"></script>
+</body>
+</html>
