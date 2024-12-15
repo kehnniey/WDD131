@@ -59,12 +59,12 @@ header nav ul li a {
 
 /* Default menu icon */
 #menu::before {
-    content: "☰"; /* Hamburger icon */
+    content: "☰"; 
 }
 
 /* When menu is open, show close icon */
 #menu.open::before {
-    content: "❎"; /* Close icon */
+    content: "X"; 
 }
 
 /* Hero Section */
@@ -81,7 +81,7 @@ header nav ul li a {
 
 .hero img {
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     height: auto;
     margin: 1rem 0;
 }
@@ -193,7 +193,7 @@ footer .social img {
     }
 
     main {
-        grid-template-columns: repeat(3, 1fr); /* Adjust grid layout */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
 
@@ -205,7 +205,7 @@ footer .social img {
     }
 
     .nav {
-        display: none; /* Hidden by default */
+        display: none; 
         flex-direction: column;
         background-color: #333;
         position: absolute;
@@ -213,15 +213,15 @@ footer .social img {
         right: 0;
         width: 100%;
         padding: 1rem;
-        z-index: 1000; /* Ensures it overlays content */
+        z-index: 1000; 
     }
 
     .nav.open {
-        display: flex; /* Show menu when open class is added */
+        display: flex; 
     }
 
     .nav li {
-        text-align: center; /* Centers the menu items */
+        text-align: center; 
         margin: 10px 0;
     }
 
@@ -235,11 +235,12 @@ footer .social img {
     color: white;
     text-decoration: none;
     margin: 0.5rem 0;
-    padding: 0.5rem 1rem; /* Ensure padding matches the desktop style */
-    border-radius: 5px;   /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    padding: 0.5rem 1rem; 
+    border-radius: 5px;   
+    transition: background-color 0.3s ease; 
 }
 
 .nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light translucent hover background */
+    background-color: rgba(255, 255, 255, 0.2); 
 }
+
