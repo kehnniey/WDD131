@@ -29,6 +29,12 @@ header {
     justify-content: space-between;
 }
 
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.9rem;
+    text-align: left;
+    color: #f4f4f4;
+}
 header #logo img {
     height: 50px;
 }

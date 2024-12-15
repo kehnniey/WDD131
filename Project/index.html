@@ -7,14 +7,19 @@
     <meta name="description" content="Fitness Tracker Hub helps users track their fitness activities, plan workouts, and monitor progress with an easy-to-use platform.">
     <meta name="author" content="Kehinde Ojo">
     <link rel="stylesheet" href="styles/site.css">
+     <!-- JavaScript -->
+     <script src="scripts/site.js"></script>
 </head>
 <body>
     <!-- Header Section -->
     <header>
+        
         <div id="logo">
+            <h1>Fitness Tracker Hub</h1>
             <a href="index.html">
                 <img src="images/fitnesslogo.jpg" alt="Fitness Tracker Hub Logo"/>
             </a>
+          
         </div>
         <nav>
             <div id="menu"></div>
@@ -30,7 +35,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to Fitness Tracker Hub</h1>
+        <h2>Welcome to Fitness Tracker Hub</h2>
         <h2>Our Purpose</h2>
         <p>Fitness Tracker Hub is designed to help you stay on track with your fitness goals. Whether you're starting a workout routine, tracking your progress, or looking for expert tips, this platform provides all the tools you need for a healthy lifestyle.</p>
         
@@ -48,8 +53,6 @@
             <li><strong>Fitness Tips:</strong> Check out expert fitness tips to stay motivated and improve your workouts.</li>
         </ul>
     </section>
-
-    <!-- Main Content Section -->
     <main>
         <!-- Workout Planner Section -->
         <section id="workout-planner">
@@ -59,7 +62,6 @@
             <button onclick="addWorkout()">Add Workout</button>
             <ul id="workout-list"></ul>
         </section>
-
         <!-- Progress Tracker Section -->
         <section id="progress-tracker">
             <h2>Progress Tracker</h2>
@@ -87,7 +89,6 @@
             <div id="tips-container"></div>
         </section>
     </main>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; <span id="current-year"></span> Fitness Tracker Hub. Kehinde O. Ojo. All rights reserved. Last modified: <span id="last-modified"></span></p>
@@ -97,8 +98,5 @@
             <a href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="Instagram"></a>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="scripts/site.js"></script>
 </body>
 </html>
